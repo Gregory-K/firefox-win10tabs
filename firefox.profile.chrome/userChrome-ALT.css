@@ -1,0 +1,66 @@
+/**
+ * github repository -- https://github.com/Gregory-K/firefox-win10tabs
+ * 
+ * This css file is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * 
+ */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+@-moz-document url(chrome://browser/content/browser.xul) {
+  /* Allow custom window colors */
+  #main-window {
+    background-color: transparent !important;
+  }
+
+  /* Make the menu bar background color transparent so it remains the same color as the title bar */
+  #main-menubar {
+    background-color: transparent !important;
+  }
+
+  /* Make the minimize, maximize and close buttons background colors transparent so they are the same color as the title bar */
+  #main-window #titlebar-buttonbox .titlebar-button {
+    background-color: transparent !important;
+    list-style-image: none !important;
+    padding: 9px 17px 9px 16px !important;
+    transition: background-color linear 100ms !important;
+  }
+
+  /* Darken the minimize and maximize buttons when hovering over them */
+  #titlebar-buttonbox #titlebar-min:-moz-any(:hover,[open]), #titlebar-buttonbox #titlebar-max:-moz-any(:hover,[open]) {
+    background-color: hsla(0, 0%, 0%, 0.1) !important;
+  }
+
+  /* Make the close button red with a white X icon when hovering over it */
+  #titlebar-buttonbox #titlebar-close:-moz-any(:hover,[open]) {
+    background-color: hsla(355, 86%, 49%, 1) !important;
+    list-style-image: url('data:image/svg+xml;charset=UTF-8,<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><style>g%23close{stroke:%23fff;}</style><g id="close"><path d="M1,1 l 10,10 M1,11 l 10,-10"/></g></svg>') !important;
+  }
+
+  /* Set the minimize button margin when the window is maximized */
+  #main-window[sizemode="maximized"] #titlebar-buttonbox #titlebar-min.titlebar-button {
+    margin-right: 1px !important;
+  }
+
+  /* Set the minimize button margin when the window is not maximized */
+  #main-window #titlebar-buttonbox #titlebar-min.titlebar-button {
+    margin-right: 2px !important;
+  }
+
+  /* Set the maximize button margin*/
+  #main-window #titlebar-buttonbox #titlebar-max.titlebar-button {
+    margin-right: 1px !important;
+  }
+
+  /* Set the close button margin when the window is maximized */
+  #main-window[sizemode="maximized"] #titlebar-buttonbox #titlebar-close.titlebar-button {
+    margin-right: 2px !important;
+  }
+
+  /* Remove the ugly line on top of the selected tab */
+  .tabbrowser-tab[selected] {
+    margin-top: -1px !important;
+  }
+}

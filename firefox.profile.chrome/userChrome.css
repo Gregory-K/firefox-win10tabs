@@ -1,0 +1,59 @@
+/**
+ * github repository -- https://github.com/Gregory-K/firefox-win10tabs
+ * 
+ * This css file is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * 
+ */
+
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#TabsToolbar:not(:-moz-lwtheme)::after {
+  opacity: 0 !important;
+}
+
+tab[selected="true"] {
+  color: black !important;
+  text-shadow: 0 0 1px #ccc, 0 0 1px #ccc, 0 0 1px #ccc, 0 0 1px #ccc, 0 0 1px #ccc, 0 0 1px #ccc, 0 0 3px #444 !important;
+}
+
+tab {
+  color: white !important;
+  text-shadow: 0 0 1px #666, 0 0 1px #666, 0 0 1px #666, 0 0 1px #666, 0 0 1px #666, 0 0 1px #666, 0 0 3px #444 !important;
+}
+
+/*enable/disable new tab button*/
+/*#main-window .tabs-newtab-button,
+#main-window #TabsToolbar #new-tab-button > .toolbarbutton-icon {
+  list-style-image: url("chrome://browser/skin/tabbrowser/newtab-inverted.png") !important;
+}*/
+
+#main-window #alltabs-button[type="menu"],
+#main-window .toolbarbutton-1 .dropmarker-icon {
+  list-style-image: url("chrome://browser/skin/toolbarbutton-dropdown-arrow-inverted.png") !important;
+}
+
+#main-window #tabview-button {
+  list-style-image: url("chrome://browser/skin/tabview/tabview-inverted.png") !important;
+}
+
+
+/* Colored Taskbar */
+
+#main-window, .titlebar-button {
+background-color: transparent !important;
+transition: background-color 0.2s ease;
+}
+.titlebar-button > .toolbarbutton-icon {
+list-style-image: none;
+}
+.titlebar-button:hover {
+background-color: rgba(0, 0, 0, 0.15) !important;
+}
+#titlebar-close:hover {
+background-color: #E81123 !important;
+}
+#titlebar-close:hover > .toolbarbutton-icon {
+list-style-image: url("chrome://browser/skin/caption-buttons.svg#close-white") !important;
+}
