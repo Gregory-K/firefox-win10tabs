@@ -7,9 +7,10 @@
  * 
  */
 
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul');
 
-@-moz-document url(chrome://browser/content/browser.xul) {
+@-moz-document url('chrome://browser/content/browser.xul') {
+
   /* Allow custom window colors */
   #main-window {
     background-color: transparent !important;
@@ -63,4 +64,5 @@
   .tabbrowser-tab[selected] {
     margin-top: -1px !important;
   }
+
 }
