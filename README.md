@@ -4,7 +4,9 @@ UserChrome cascading style sheets to enable background colored title/tab bar in 
 
 github repository <https://github.com/Gregory-K/firefox-win10tabs>  
 relative bug [Firefox title bar should pick up the Windows 10 accent color when in the foreground](https://bugzilla.mozilla.org/show_bug.cgi?id=1196266)  
-**status fixed - Firefox version 56** _(well not for me...)_  
+~~status fixed - Firefox version 56** _(well not for me...)_~~  
+**status fixed - Firefox version 57** _(tested on Firefox Developer v57.xx)_  
+When Firefox stable edition updates to the new "Firefox Quantum" delete the userChrome.css.  
 
 ## Updates
 
